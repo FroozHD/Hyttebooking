@@ -1,5 +1,39 @@
-<!DOCTYPE html>
 <html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiehytta Booking</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #content { display: none; }
+    </style>
+    <script>
+        function sjekkPassord() {
+            const passord = prompt("Skriv inn passord:");
+            if (passord === "familie123") {
+                document.getElementById("content").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                alert("Feil passord! Prøv igjen.");
+                sjekkPassord();
+            }
+        }
+    </script>
+</head>
+<body onload="sjekkPassord()">
+    <div id="login">
+        <p>Vennligst skriv inn passord for å se siden.</p>
+    </div>
+    <div id="content">
+        <h1>Velkommen til Familiehytta Booking</h1>
+        <p>Her kan du booke hytta og se hvem som er der.</p>
+       
+    </div>
+</body>
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
